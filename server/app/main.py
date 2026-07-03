@@ -77,3 +77,6 @@ async def health_check():
 @app.get("/")
 def root():
     return {"message": "Inventory Hub API is running"}
+@app.head("/")
+def root_head():
+    return
