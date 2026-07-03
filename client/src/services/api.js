@@ -5,7 +5,7 @@ import axios from 'axios';
 
 // Create central Axios instance with environment-defined base URL
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8000',
+  baseURL: import.meta.env.VITE_API_URL || 'https://inventory-hub-backend.onrender.com',
   withCredentials: true, // Send HTTP-only session cookies in cross-origin requests
 });
 
@@ -39,7 +39,7 @@ api.interceptors.response.use(
       !originalRequest.url.includes('/api/auth/refresh')
     ) {
       originalRequest._retry = true; // Mark request to prevent infinite loops
-      
+
       try {
         // Call the token renewal route (sends cookies automatically)
         const refreshResponse = await axios.post(
@@ -58,7 +58,7 @@ api.interceptors.response.use(
       } catch (refreshError) {
         // Refresh token has expired or is invalid. Remove access token.
         localStorage.removeItem('access_token');
-        
+
         // Dispatch global event for context to catch and redirect user
         window.dispatchEvent(new Event('auth-expired'));
         return Promise.reject(refreshError);
