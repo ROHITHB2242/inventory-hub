@@ -1,0 +1,44 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules/
+client/node_modules/
+server/venv/
+server/.venv/
+env/
+.env/
+htmlcov/
+.tox/
+.coverage
+.cache
+.pytest_cache/
+
+# Build outputs
+client/dist/
+client/dist-ssr/
+build/
+dist/
+
+# Local Environment Variables & Secrets
+.env
+.env.local
+.env.*.local
+client/.env
+client/.env.local
+client/.env.*.local
+server/.env
+server/.env.local
+
+# IDE/OS files
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.bak
