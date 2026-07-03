@@ -1,7 +1,9 @@
 # app/services/auth_service.py
 # Purpose: Service utility for hashing passwords and generating/verifying JWT tokens.
 
+# pyrefly: ignore [missing-import]
 import bcrypt
+# pyrefly: ignore [missing-import]
 import jwt
 from datetime import datetime, timedelta, timezone
 from typing import Dict, Any, Optional

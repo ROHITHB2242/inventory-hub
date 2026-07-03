@@ -1,11 +1,12 @@
 # app/database.py
 # Purpose: Initialize MongoDB async database client and provide collection hooks.
 
+import certifi
 from motor.motor_asyncio import AsyncIOMotorClient
 from app.config import settings
 
-# Initialize the async MongoDB client using the URI from settings
-client = AsyncIOMotorClient(settings.MONGODB_URI)
+# Initialize the async MongoDB client using the URI from settings and certifi CA bundle
+client = AsyncIOMotorClient(settings.MONGODB_URI, tlsCAFile=certifi.where())
 
 # Get the database instance
 db = client[settings.MONGODB_DB_NAME]

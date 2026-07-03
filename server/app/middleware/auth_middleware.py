@@ -1,6 +1,7 @@
 # app/middleware/auth_middleware.py
 # Purpose: FastAPI route protection dependency for verifying JWT tokens and fetching current user.
 
+# pyrefly: ignore [missing-import]
 from fastapi import Request, HTTPException, status, Depends
 from app.services.auth_service import decode_jwt_token
 from app.services.user_service import get_user_by_id

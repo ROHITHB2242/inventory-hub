@@ -74,3 +74,6 @@ async def health_check():
         "status": "healthy" if db_status else "degraded",
         "database": "connected" if db_status else "disconnected"
     }
+@app.get("/")
+def root():
+    return {"message": "Inventory Hub API is running"}

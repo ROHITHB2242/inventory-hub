@@ -1,6 +1,7 @@
 # app/routes/items.py
 # Purpose: FastAPI router mapping item CRUD endpoints to controllers, protected by JWT auth.
 
+# pyrefly: ignore [missing-import]
 from fastapi import APIRouter, Depends, Query, status
 from app.models.item import ItemResponse, ItemsListResponse, ItemCreate, ItemUpdate
 from app.controllers import item_controller

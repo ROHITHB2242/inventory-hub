@@ -1,6 +1,7 @@
 # app/controllers/item_controller.py
 # Purpose: Controller endpoints handling CRUD actions and dashboard statistics.
 
+# pyrefly: ignore [missing-import]
 from fastapi import HTTPException, status
 from app.models.item import ItemCreate, ItemUpdate
 from app.services import item_service

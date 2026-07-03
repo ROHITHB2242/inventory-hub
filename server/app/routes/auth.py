@@ -1,6 +1,7 @@
 # app/routes/auth.py
 # Purpose: FastAPI router mapping authentication endpoints to controllers.
 
+# pyrefly: ignore [missing-import]
 from fastapi import APIRouter, Depends, Response, Request, status
 from app.models.user import UserSignUp, UserLogin, UserResponse, GoogleAuthRequest
 from app.controllers import auth_controller
