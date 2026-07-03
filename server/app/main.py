@@ -80,3 +80,9 @@ def root():
 @app.head("/")
 def root_head():
     return
+origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:3000",
+    "https://inventory-hub-eight-ashen.vercel.app",
+]
